@@ -1,34 +1,46 @@
-* {
+/* Consolidated CSS with comments */
+
+/* Reset box model and margins/padding for all elements */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
+/* Define color variables */
 :root {
     --whitefont: #fff;
     --body-bgcolor: #d9dcd6;
     --article-bgcolor: #0072bb;
 }
 
+/* Apply font and background color to the entire body */
 body {
     background-color: var(--body-bgcolor);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Styles for the header */
 header {
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: var(--whitefont);
-}
-
-header h1 {
-    display: inline-block;
     font-size: 48px;
 }
 
+/* Remove font size from header h1 and adjust spacing for .seo */
+header h1 {
+    display: inline-block;
+}
+
+/* Change color for .seo class within header h1 */
 header h1 .seo {
     color: var(--body-bgcolor);
 }
 
+/* Styles for navigation */
 nav {
     padding-top: 15px;
     margin-right: 20px;
@@ -37,49 +49,47 @@ nav {
     font-size: 20px;
 }
 
+/* Adjust margin for nav ul */
 nav ul {
     list-style-type: none;
-}
-
-nav ul li {
-    display: inline-block;
     margin-left: 25px;
 }
 
+/* Styles for links */
 a {
     color: var(--whitefont);
     text-decoration: none;
 }
 
+/* Common paragraph style */
 p {
     font-size: 16px;
 }
 
+/* Hero section styles */
 .hero {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
+    background: url("../images/digital-marketing-meeting.jpg") center/cover no-repeat;
 }
 
-.float-left {
+/* Combined .float-left and .float-right styles */
+.float-left,
+.float-right {
     float: left;
     margin-right: 25px;
-}
-
-.float-right {
-    float: right;
     margin-left: 25px;
 }
 
+/* Styles for main content */
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
+/* Combined .benefits styles */
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -89,25 +99,26 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
-}
-
-.benefit-lead, .benefit-brand, .benefit-cost {
-    margin-bottom: 32px;
     color: var(--whitefont);
 }
 
-.benefit-lead h3, .benefit-brand h3, .benefit-cost h3 {
+/* Adjust margin for .benefits h3 */
+.benefits h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-lead img, .benefit-cost img, .benefit-brand img {
+/* Adjust image margin for .benefits img */
+.benefits img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.search-engine-optimization, .social-media-marketing, .online-reputation-management {
+/* Combined styles for article sections */
+.search-engine-optimization,
+.social-media-marketing,
+.online-reputation-management {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -116,22 +127,29 @@ p {
     color: var(--whitefont);
 }
 
-.search-engine-optimization img, .social-media-marketing img, .online-reputation-management img {
+/* Adjust max-height for article section images */
+.search-engine-optimization img,
+.social-media-marketing img,
+.online-reputation-management img {
     max-height: 200px;
 }
 
-.search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
+/* Adjust margin and font size for article section headings */
+.search-engine-optimization h2,
+.social-media-marketing h2,
+.online-reputation-management h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
+/* Styles for footer */
 footer {
     padding: 30px;
     clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
+/* Adjust font size for footer h2 */
 footer h2 {
     font-size: 20px;
 }
